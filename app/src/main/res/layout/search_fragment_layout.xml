@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center_horizontal"
+              android:background="@color/colorWhite"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+        <com.viewpagerindicator.TabPageIndicator
+            android:id="@+id/tab_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></com.viewpagerindicator.TabPageIndicator>
+
+    <com.sendi.picture_recognition.widget.SearchViewPager
+        android:id="@+id/vp_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        ></com.sendi.picture_recognition.widget.SearchViewPager>
+</LinearLayout>

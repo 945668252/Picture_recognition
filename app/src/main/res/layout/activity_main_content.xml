@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="50dp"
+    >
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_bottom_parent_bg"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/bottom_RB_style"
+            android:drawableTop="@drawable/main_bottom_home_selector"
+            android:text="首页"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_search"
+            style="@style/bottom_RB_style"
+            android:drawableTop="@drawable/main_bottom_search_selector"
+            android:paddingTop="13dp"
+            android:text="寻找"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_record"
+            style="@style/bottom_RB_style"
+            android:drawableTop="@drawable/main_bottom_record_selector"
+            android:text="挑战"
+            />
+    </RadioGroup>
+
+</LinearLayout>

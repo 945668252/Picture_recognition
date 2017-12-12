@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_grade"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/ll_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="加载失败~(≧▽≦)~啦啦啦."
+            android:textColor="@color/colorTheme"
+            android:textSize="20sp"
+            />
+        <Button
+            android:id="@+id/bt_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="15sp"
+            android:text="点我重新加载"
+            android:background="@drawable/button_home_shape"
+            />
+    </LinearLayout>
+
+    <com.sendi.picture_recognition.widget.DiffuseView
+        android:id="@+id/diffuse_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:diffuse_color="@color/colorTheme"
+        app:diffuse_coreColor="@color/colorWhite"
+        app:diffuse_coreRadius="80"
+        app:diffuse_maxWidth="400"
+        app:diffuse_width="3"
+        app:diffuse_speed="2"
+        app:diffuse_coreImage="@mipmap/search_ic"
+        />
+</RelativeLayout>

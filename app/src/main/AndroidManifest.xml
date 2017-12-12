@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sendi.picture_recognition">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 语音转化 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.activity.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".controller.activity.LoginActivity">
+        </activity>
+        <activity android:name=".controller.activity.RegisterActivity">
+        </activity>
+        <activity android:name=".controller.activity.MakeTagActivity">
+        </activity>
+        <activity android:name=".controller.activity.UserInfoActivity">
+        </activity>
+        <activity android:name=".view.activity.GradeActivity">
+        </activity>
+        <activity android:name=".controller.activity.AlertUserInfoActivity">
+        </activity>
+        <activity android:name=".controller.activity.UpdateTagsActivity">
+        </activity>
+        <activity android:name=".controller.activity.SplashActivity">
+
+        </activity>
+        <activity android:name=".controller.activity.SettingActivity">
+        </activity>
+        <activity android:name=".controller.activity.PicClassDetailActivity">
+        </activity>
+        <activity android:name=".controller.activity.TestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".controller.activity.RecordActivity">
+        </activity>
+        <activity android:name=".controller.activity.ChallengeActivity">
+        </activity>
+        <activity android:name=".controller.activity.IntegralShopActivity"/>
+
+        <activity android:name=".controller.activity.SingleChallengeActivity"/>
+        <activity android:name=".controller.activity.PKResultActivity"/>
+        <activity android:name=".view.activity.MoreChallengeActivity"/>
+        <activity android:name=".view.activity.SingleChallengeActivity"/>
+        <activity android:name=".view.activity.UserInfoActivity"/>
+        <activity android:name=".view.activity.AlertUserInfoActivity"/>
+        <activity android:name=".view.activity.SettingActivity"/>
+    </application>
+
+</manifest>

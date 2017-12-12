@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_gravity="center"
+              android:padding="2dp">
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:background="@drawable/make_tag_item_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:padding="6dp"
+        android:text="小英是傻逼"
+        android:textColor="@color/colorBlack"
+        />
+
+    <ImageButton
+        android:visibility="gone"
+        android:id="@+id/ib_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@null"
+        android:src="@mipmap/add_ic"
+        />
+</LinearLayout>

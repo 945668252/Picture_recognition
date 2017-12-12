@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+    >
+<TextView
+    android:id="@+id/tv_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="头像"
+    android:layout_centerVertical="true"
+    android:textSize="18sp"
+    android:textColor="@color/black"
+    />
+    <ImageView
+        android:id="@+id/iv_more_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/more"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        />
+    <com.sendi.picture_recognition.widget.CircleImageView
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/iv_pic_item"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/test"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@id/iv_more_item"
+        android:visibility="invisible"
+        android:layout_marginRight="30dp"
+        />
+    <TextView
+        android:id="@+id/tv_content_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@id/iv_more_item"
+        android:layout_marginRight="30dp"
+        android:text="啊森弟"
+        />
+</RelativeLayout>

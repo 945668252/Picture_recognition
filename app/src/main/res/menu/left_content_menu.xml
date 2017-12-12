@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_grade"
+        android:icon="@mipmap/grade_ic"
+        android:title="我的积分"/>
+    <item
+        android:id="@+id/nav_alert"
+        android:icon="@mipmap/alert_person_ic"
+        android:title="修改资料"/>
+    <item
+        android:id="@+id/nav_record"
+        android:icon="@mipmap/history_ic"
+        android:title="我的记录"/>
+    <item
+        android:id="@+id/nav_goods"
+        android:icon="@mipmap/shop_ic"
+        android:title="积分商城"/>
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@mipmap/setting_ic"
+        android:title="设置"/>
+</menu>

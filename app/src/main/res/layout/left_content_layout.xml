@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sendi.picture_recognition.controller.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorTheme"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        >
+
+        <com.sendi.picture_recognition.widget.CircleImageView
+            android:id="@+id/left_user_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/test"
+            app:border_color="@color/colorWhite"
+            app:border_width="2dp"
+            />
+
+            <TextView
+                android:id="@+id/uer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="啊森弟"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                />
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_grade"
+            style="@style/user_RL_style">
+
+            <ImageView
+                android:id="@+id/iv_grade"
+                style="@style/user_IV_style"
+                android:src="@mipmap/news"
+                />
+
+            <TextView
+                style="@style/user_TV_style"
+                android:layout_toRightOf="@id/iv_grade"
+                android:text="我的积分"
+                />
+
+            <ImageView
+                style="@style/user_IV_more_style"
+                android:src="@mipmap/more"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_alert"
+            style="@style/user_RL_style">
+
+            <ImageView
+                android:id="@+id/iv_alert"
+                style="@style/user_IV_style"
+                android:src="@mipmap/news"
+                />
+
+            <TextView
+                style="@style/user_TV_style"
+                android:layout_toRightOf="@id/iv_alert"
+                android:text="修改资料"
+                />
+
+            <ImageView
+                style="@style/user_IV_more_style"
+                android:src="@mipmap/more"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_qrcode"
+            style="@style/user_RL_style">
+
+            <ImageView
+                android:id="@+id/iv_qrcode"
+                style="@style/user_IV_style"
+                android:src="@mipmap/news"
+                />
+
+            <TextView
+                style="@style/user_TV_style"
+                android:layout_toRightOf="@id/iv_qrcode"
+                android:text="我的二维码"
+                />
+
+            <ImageView
+                style="@style/user_IV_more_style"
+                android:src="@mipmap/more"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_setting"
+            style="@style/user_RL_style">
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                style="@style/user_IV_style"
+                android:src="@mipmap/news"
+                />
+
+            <TextView
+                style="@style/user_TV_style"
+                android:layout_toRightOf="@id/iv_setting"
+                android:text="设置"
+                />
+
+            <ImageView
+                style="@style/user_IV_more_style"
+                android:src="@mipmap/more"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_user_name"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/iv_user_pic"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="Asendi"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="18sp"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_user_sex"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/tv_user_name"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:text="BOY"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="22sp"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_user_hobby"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/tv_user_sex"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="play basketball、like animal and plant."-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="16sp"-->
+    <!--/>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginBottom="40dp"-->
+    <!--android:orientation="horizontal"-->
+    <!--&gt;-->
+
+    <!--<LinearLayout-->
+    <!--style="@style/user_LL_style">-->
+
+    <!--<ImageView-->
+    <!--style="@style/user_IV_style"-->
+    <!--android:src="@mipmap/add_apply"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--style="@style/user_TV_style"-->
+    <!--android:text="积分"-->
+
+    <!--/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--style="@style/user_LL_style">-->
+
+    <!--<ImageView-->
+    <!--style="@style/user_IV_style"-->
+    <!--android:src="@mipmap/add_apply"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--style="@style/user_TV_style"-->
+    <!--android:text="修改"-->
+    <!--/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--style="@style/user_LL_style">-->
+
+    <!--<ImageView-->
+    <!--style="@style/user_IV_style"-->
+    <!--android:src="@mipmap/add_apply"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--style="@style/user_TV_style"-->
+    <!--android:text="排名"-->
+    <!--/>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

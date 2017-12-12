@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+<android.support.v7.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        >
+
+
+        <com.sendi.picture_recognition.widget.CircleImageView
+            android:id="@+id/iv_chart_pic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/test2"
+            app:border_color="@color/colorTheme"
+            app:border_width="1dp"
+            />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_weight="1"
+    >
+    <TextView
+        android:id="@+id/tv_chart_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="啊森弟"
+        android:textSize="14sp"
+        android:textColor="@color/colorTheme"
+        />
+    <TextView
+        android:id="@+id/tv_experience_string"
+        android:layout_below="@id/tv_chart_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="经验值:"
+        android:textColor="@color/colorTheme"
+        />
+    <TextView
+        android:id="@+id/tv_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@id/tv_chart_name"
+        android:layout_toRightOf="@id/tv_experience_string"
+        android:textColor="@color/colorTheme"
+        android:text="100"
+        />
+</RelativeLayout>
+
+
+        <Button
+            android:id="@+id/bt_chart"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_bg_shape"
+            android:text="挑战"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+</LinearLayout>

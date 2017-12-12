@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_setting2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sendi.picture_recognition.controller.activity.SettingActivity">
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@color/colorTheme"
+        >
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@null"
+            android:src="@mipmap/back"
+            android:onClick="back"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            />
+    </RelativeLayout>
+
+   <RadioGroup
+       android:id="@+id/rg_setting"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:orientation="vertical"
+       android:background="@color/colorWhite"
+       android:layout_below="@id/rl_title"
+       >
+       <RadioButton
+           style="@style/Setting_RB_Style"
+           android:id="@+id/setting_rb_chinese"
+           android:text="中文"
+           />
+       <TextView
+           android:layout_width="match_parent"
+           android:background="@color/colorBlack"
+           android:layout_marginLeft="10dp"
+           android:layout_height="1dp"/>
+       <RadioButton
+           style="@style/Setting_RB_Style"
+           android:id="@+id/setting_rb_english"
+           android:text="English"
+           />
+   </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg_shape"
+        android:text="退出账号"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:onClick="exit"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        />
+</RelativeLayout>

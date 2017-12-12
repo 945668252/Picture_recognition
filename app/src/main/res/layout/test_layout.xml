@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_bg_shape"
+    android:layout_gravity="center"
+    android:text="toast"
+    android:textColor="@color/white"
+    android:onClick="onToast"
+    android:layout_marginTop="10dp"
+    />
+
+
+    <TextView
+        android:id="@+id/text01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="广学明德，海纳厚为"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/layout_bothdistance10_worlduc_dp"
+        />
+
+    <TextView
+        android:id="@+id/text02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="坚韧不拔，自强不息"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/layout_bothdistance10_worlduc_dp"
+        />
+</LinearLayout>

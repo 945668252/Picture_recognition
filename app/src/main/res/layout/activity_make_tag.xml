@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_make_tag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sendi.picture_recognition.controller.activity.MakeTagActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/iv_make_tag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/test"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:drawableLeft="@mipmap/back"
+            android:drawablePadding="3dp"
+            android:text="返回"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="15dp"
+            android:onClick="back"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="[推荐标签]"
+            />
+
+        <com.sendi.picture_recognition.widget.NotScrollRecyclerView
+            android:id="@+id/rv_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+
+            ></com.sendi.picture_recognition.widget.NotScrollRecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorTheme"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_shape"
+            android:onClick="startListen"
+            android:text="语音"
+            android:textColor="@color/colorWhite"
+            />
+
+        <EditText
+            android:id="@+id/et_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/make_tag_et_shape"
+            android:hint="input your custom tags"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColorHint="@color/colorTheme"
+            />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_shape"
+            android:onClick="submitTag"
+            android:text="提交"
+            android:textColor="@color/colorWhite"
+            />
+    </LinearLayout>
+</LinearLayout>
