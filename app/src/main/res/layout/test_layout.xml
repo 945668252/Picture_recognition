@@ -1,41 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/button_bg_shape"
-    android:layout_gravity="center"
-    android:text="toast"
-    android:textColor="@color/white"
-    android:onClick="onToast"
-    android:layout_marginTop="10dp"
-    />
-
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <TextView
-        android:id="@+id/text01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="广学明德，海纳厚为"
-        android:textColor="@color/black"
-        android:layout_gravity="center"
-        android:textSize="20sp"
-        android:layout_marginTop="@dimen/layout_bothdistance10_worlduc_dp"
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
+        android:gravity="end|center"
+        android:text="0.0"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
         />
 
-    <TextView
-        android:id="@+id/text02"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="坚韧不拔，自强不息"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:visibility="gone"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/layout_bothdistance10_worlduc_dp"
-        />
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            style="@style/bt_style"
+            android:onClick="onDigitalClick"
+            android:text="1"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:onClick="onDigitalClick"
+            android:text="2"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:onClick="onDigitalClick"
+            android:text="3"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="onAdd"
+            android:text="+"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            style="@style/bt_style"
+            android:onClick="onDigitalClick"
+            android:text="4"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:onClick="onDigitalClick"
+            android:text="5"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:onClick="onDigitalClick"
+            android:text="6"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="onSub"
+            android:text="-"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            style="@style/bt_style"
+            android:onClick="onDigitalClick"
+            android:text="7"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:onClick="onDigitalClick"
+            android:text="8"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:onClick="onDigitalClick"
+            android:text="9"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="onMul"
+            android:text="*"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            style="@style/bt_style"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:onClick="onDigitalClick"
+            android:text="0"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:layout_width="60dp"
+            android:background="@null"
+            android:onClick="onDigitalClick"
+
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="onPointClick"
+            android:text="."
+            android:textColor="@color/white"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:onClick="onDiv"
+            android:text="/"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/bt_style"
+            android:onClick="onDel"
+            android:text="BACK"
+            />
+
+        <Button
+            style="@style/bt_style"
+            android:layout_width="160dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:onClick="onEqu"
+            android:text="="
+            android:textSize="30sp"
+            />
+    </LinearLayout>
+
 </LinearLayout>

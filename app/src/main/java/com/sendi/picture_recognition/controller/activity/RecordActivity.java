@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.sendi.picture_recognition.R;
@@ -28,7 +29,6 @@ import java.util.List;
  * 记录
  */
 public class RecordActivity extends BaseActivity {
-
     private final static String TAG = RecordActivity.class.getSimpleName();
     private RecyclerView mRecyclerView;
     private CircleRefreshLayout mCircleRefreshLayout;

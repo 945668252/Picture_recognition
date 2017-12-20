@@ -22,8 +22,6 @@ import com.bumptech.glide.Glide;
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.base.BaseActivity;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.activity.IntegralShopActivity;
-import com.sendi.picture_recognition.controller.activity.RecordActivity;
 
 import com.sendi.picture_recognition.base.BaseFragment;
 import com.sendi.picture_recognition.view.fragment.home.HomeFragment;
@@ -214,7 +212,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-
         if (id == R.id.nav_grade) {//积分
             startActivity(new Intent(MainActivity.this, GradeActivity.class));
         } else if (id == R.id.nav_alert) {//修改资料

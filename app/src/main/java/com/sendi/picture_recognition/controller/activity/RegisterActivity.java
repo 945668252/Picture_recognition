@@ -63,7 +63,7 @@ public class RegisterActivity extends BaseActivity {
      */
     public void getCode(View view) {
         String mobile = et_number.getText().toString();
-        Log.i("TAG", "getCode: "+mobile);
+        Log.i("TAG", "getCode: " + mobile);
         RetrofitFactory.getInstance().getAPI()
                 .getCode(mobile)
                 .compose(this.<BaseEntity<String>>setThread())
@@ -94,8 +94,8 @@ public class RegisterActivity extends BaseActivity {
 
                                     @Override
                                     public void onNext(Long aLong) {
-                                        bt_get.setText("剩余"+aLong+"秒");
-                                        if (aLong==0){
+                                        bt_get.setText("剩余" + aLong + "秒");
+                                        if (aLong == 0) {
                                             bt_get.setEnabled(true);
                                             bt_get.setText("获取验证码");
                                         }
@@ -118,7 +118,7 @@ public class RegisterActivity extends BaseActivity {
 
                     }
                 });
-}
+    }
 
     /**
      * 提交注册信息
@@ -131,10 +131,10 @@ public class RegisterActivity extends BaseActivity {
         String hobbies = et_hobbies.getText().toString();
         String gender = et_sex.getText().toString();
         String sex;
-        if (gender.equals("男")){
-            sex="1";
-        }else {
-            sex="0";
+        if (gender.equals("男")) {
+            sex = "1";
+        } else {
+            sex = "0";
         }
         String mobil = et_number.getText().toString();
         String code = et_code.getText().toString();
@@ -144,10 +144,10 @@ public class RegisterActivity extends BaseActivity {
                 .subscribe(new BaseObserver<String>() {
                     @Override
                     protected void onSuccess(BaseEntity<String> t) throws Exception {
-                        Log.i("TAG", "onSuccess: "+t.getData());
+                        Log.i("TAG", "onSuccess: " + t.getData());
                         new CanDialog.Builder(RegisterActivity.this)
                                 .setMessage("注册成功")
-                                .setNegativeButton("",false,null)
+                                .setNegativeButton("", false, null)
                                 .setPositiveButton("去登录", true, new CanDialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(CanDialog dialog, int checkItem, CharSequence text, boolean[] checkItems) {
@@ -166,7 +166,6 @@ public class RegisterActivity extends BaseActivity {
                     }
                 });
     }
-
     /**
      * 跳转到登录页
      *
@@ -176,4 +175,5 @@ public class RegisterActivity extends BaseActivity {
         startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
         finish();
     }
+
 }
