@@ -10,8 +10,8 @@ import android.util.Log;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechUtility;
 import com.sendi.picture_recognition.R;
+import com.sendi.picture_recognition.base.BaseActivity;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.activity.*;
 import com.sendi.picture_recognition.utils.httputils.sputils.SPUtils;
 import com.sendi.picture_recognition.utils.httputils.sqliteutils.SqliteDBUtils;
 import com.sendi.userdb.DaoMaster;
@@ -47,7 +47,7 @@ public class SplashActivity extends BaseActivity {
         if (list.size()!=0) {//直接跳转到主界面
             startActivity(new Intent(SplashActivity.this, MainActivity.class));
         }else {//跳转到登录界面
-            startActivity(new Intent(SplashActivity.this, com.sendi.picture_recognition.controller.activity.LoginActivity.class));
+            startActivity(new Intent(SplashActivity.this, LoginActivity.class));
         }
         finish();
     }
@@ -77,4 +77,13 @@ public class SplashActivity extends BaseActivity {
         SpeechUtility.createUtility(this, SpeechConstant.APPID + "=592695f2");
     }
 
+    @Override
+    public void showLoading() {
+
+    }
+
+    @Override
+    public void hideLoading(boolean isSuccess) {
+
+    }
 }

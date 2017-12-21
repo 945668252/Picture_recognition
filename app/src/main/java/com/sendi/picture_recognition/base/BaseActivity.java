@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
+import com.sendi.picture_recognition.utils.ActivityController;
 import com.sendi.picture_recognition.view.IView;
 
 /**
@@ -18,6 +19,12 @@ public abstract class BaseActivity  extends AppCompatActivity implements IView{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+        ActivityController.addActivity(this);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityController.remove(this);
+    }
 }

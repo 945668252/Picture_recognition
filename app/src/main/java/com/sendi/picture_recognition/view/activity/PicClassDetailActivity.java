@@ -13,7 +13,7 @@ import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.HomePicInfo;
 import com.sendi.picture_recognition.bean.ImgInfo;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.adapter.ClassDetailAdapter;
+import com.sendi.picture_recognition.view.adapter.ClassDetailAdapter;
 import com.sendi.picture_recognition.presenter.act.PicClassDetailPresenter;
 import com.sendi.picture_recognition.utils.httputils.parseutils.SplitString;
 import com.sendi.picture_recognition.view.activity.abs.PicClassDetailView;
@@ -54,6 +54,7 @@ public class PicClassDetailActivity extends PicClassDetailView {
         picInfoList=new ArrayList<>();
 
         mPresenter=new PicClassDetailPresenter();
+        mPresenter.bindView(this);
 
         mAdapter=new ClassDetailAdapter(picInfoList,this);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this,3));
@@ -66,7 +67,7 @@ public class PicClassDetailActivity extends PicClassDetailView {
                 HomePicInfo homePicInfo=picInfoList.get(position);
                 String[] tags= SplitString.StringToArray(homePicInfo.getTags());
                 ImgInfo imgInfo=new ImgInfo(tags,homePicInfo.getPic_url(),homePicInfo.getPic_id());
-                Intent intent=new Intent(PicClassDetailActivity.this, com.sendi.picture_recognition.controller.activity.MakeTagActivity.class);
+                Intent intent=new Intent(PicClassDetailActivity.this,MakeTagActivity.class);
                 intent.putExtra("imgInfo",imgInfo);
                 startActivity(intent);
             }
@@ -106,5 +107,11 @@ public class PicClassDetailActivity extends PicClassDetailView {
      */
     public void reLoad(View view) {
         mPresenter.getDetailClassPic(GlobalConfig.USERID,classify,GlobalConfig.LANGUAGETYPE);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPresenter.detachView();
     }
 }

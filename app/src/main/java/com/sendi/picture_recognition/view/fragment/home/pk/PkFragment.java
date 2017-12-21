@@ -9,7 +9,6 @@ import android.widget.RadioGroup;
 
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.base.BaseFragment;
-import com.sendi.picture_recognition.controller.activity.MainActivity;
 
 
 

@@ -18,7 +18,7 @@ import com.canyinghao.candialog.CanDialog;
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.GoodsData;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.adapter.GoodsAdapter;
+import com.sendi.picture_recognition.view.adapter.GoodsAdapter;
 import com.sendi.picture_recognition.presenter.IntegralShopPresenter;
 import com.sendi.picture_recognition.view.activity.abs.IntegralShopView;
 import com.sendi.picture_recognition.view.adapter.SearchPagerAdapter;
@@ -100,6 +100,7 @@ public class IntegralShopActivity extends IntegralShopView implements ComonPopup
 
 
         mPresenter = new IntegralShopPresenter();
+        mPresenter.bindView(this);
         mPresenter.shoeGoodsData();
     }
 
@@ -110,13 +111,21 @@ public class IntegralShopActivity extends IntegralShopView implements ComonPopup
     }
 
     @Override
-    public void submitSuccess(String result) {
+    public void submitSuccess(String result,boolean isSuccess) {
         mPopupWindow.dismiss();
-        new CanDialog.Builder(IntegralShopActivity.this)
-                .setTitle("兑换成功")
-                .setMessage("恭喜你，兑换成功！")
-                .setPositiveButton("继续兑换", true, null)
-                .show();
+        if (isSuccess){
+            new CanDialog.Builder(IntegralShopActivity.this)
+                    .setTitle("兑换成功")
+                    .setMessage(result)
+                    .setPositiveButton("继续兑换", true, null)
+                    .show();
+        }else {
+            new CanDialog.Builder(IntegralShopActivity.this)
+                    .setTitle("兑换失败")
+                    .setMessage(result)
+                    .setPositiveButton("返回", true, null)
+                    .show();
+        }
     }
 
     @Override
@@ -126,18 +135,8 @@ public class IntegralShopActivity extends IntegralShopView implements ComonPopup
 
     @Override
     public void hideLoading(boolean isSuccess) {
-        mPopupWindow.dismiss();
-        if (!isSuccess){
-            new CanDialog.Builder(IntegralShopActivity.this)
-                    .setMessage("兑换失败哦!")
-                    .setPositiveButton("确认", true, null)
-                    .show();
-        }else {
-            new CanDialog.Builder(IntegralShopActivity.this)
-                    .setMessage("兑换成功!")
-                    .setPositiveButton("确认", true, null)
-                    .show();
-        }
+        if (mPopupWindow != null)
+            mPopupWindow.dismiss();
     }
 
     @Override
@@ -177,5 +176,11 @@ public class IntegralShopActivity extends IntegralShopView implements ComonPopup
 
     public void back(View view) {
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPresenter.detachView();
     }
 }

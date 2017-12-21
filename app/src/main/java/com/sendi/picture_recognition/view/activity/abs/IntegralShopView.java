@@ -13,5 +13,5 @@ public abstract class IntegralShopView extends BaseActivity {
 
     public abstract void showGoodsData(List<GoodsData> goodsData);
 
-    public abstract void submitSuccess(String result);
+    public abstract void submitSuccess(String result,boolean isSuccess);
 }

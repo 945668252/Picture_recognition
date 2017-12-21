@@ -14,7 +14,7 @@ import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.MorePKInfo;
 import com.sendi.picture_recognition.config.GlobalConfig;
 
-import com.sendi.picture_recognition.controller.adapter.pk_adapter.MorePKAdapter;
+import com.sendi.picture_recognition.view.adapter.pk_adapter.MorePKAdapter;
 import com.sendi.picture_recognition.presenter.pk.PkPresenter;
 import com.sendi.picture_recognition.view.activity.MoreChallengeActivity;
 
@@ -27,7 +27,7 @@ import java.util.List;
 
 public class MoreFragment extends AbstractPkFragment<MorePKInfo> implements View.OnClickListener{
 
-    private final String TAG = com.sendi.picture_recognition.controller.frame.pk.MoreFragment.class.getName();
+    private final String TAG = MoreFragment.class.getName();
 
     private RecyclerView mRecyclerView;
     private Button mButton;

@@ -1,6 +1,7 @@
 package com.sendi.picture_recognition.presenter.act;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.sendi.picture_recognition.base.BaseObserver;
 import com.sendi.picture_recognition.bean.BaseEntity;
@@ -18,6 +19,9 @@ public class RecordPresenter extends AbsRecordPresenter {
 
     private RecordModel mModel;
 
+    public RecordPresenter() {
+        mModel = new RecordModel();
+    }
 
     @Override
     public void getRecordData(String uId) {
@@ -44,6 +48,7 @@ public class RecordPresenter extends AbsRecordPresenter {
 
     @Override
     public void getCacheData(Context context) {
+
         List<RecordData> recordData = mModel.getCacheData(context);
 
         if (recordData != null)

@@ -39,7 +39,6 @@ public class IntegralShopPresenter extends AbsIntegralShopPresenter {
                     @Override
                     protected void onRequestEnd(boolean isSuccess) {
                         super.onRequestEnd(isSuccess);
-                        getView().hideLoading(isSuccess);
                     }
                 });
     }
@@ -51,7 +50,7 @@ public class IntegralShopPresenter extends AbsIntegralShopPresenter {
                 .subscribe(new BaseObserver<String>() {
                     @Override
                     protected void onSuccess(BaseEntity<String> t) throws Exception {
-                        getView().submitSuccess(t.getData());
+                        getView().submitSuccess(t.getData(),true);
                     }
 
                     @Override
@@ -63,6 +62,12 @@ public class IntegralShopPresenter extends AbsIntegralShopPresenter {
                     protected void onRequestEnd(boolean isSuccess) {
                         super.onRequestEnd(isSuccess);
                         getView().hideLoading(isSuccess);
+                    }
+
+                    @Override
+                    protected void onCodeError(BaseEntity<String> t) throws Exception {
+                        super.onCodeError(t);
+                        getView().submitSuccess(t.getData(),false);
                     }
                 });
     }

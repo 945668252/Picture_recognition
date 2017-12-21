@@ -34,6 +34,7 @@ public class LoginActivity extends BaseActivity {
 
     private void initData() {
         mPresenter = new LoginPresenter();
+        mPresenter.bindView(this);
         String userName = getIntent().getStringExtra("userName");
         if (TextUtils.isEmpty(userName)) return;
 
@@ -89,5 +90,11 @@ public class LoginActivity extends BaseActivity {
         } else {
             Toast.makeText(this, "登录失败", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPresenter.detachView();
     }
 }

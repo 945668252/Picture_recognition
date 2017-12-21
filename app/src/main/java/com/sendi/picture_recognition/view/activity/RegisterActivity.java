@@ -48,6 +48,7 @@ public class RegisterActivity extends AbsRegisterView {
         initView();
 
         mPresenter=new RegisterPresenter();
+        mPresenter.bindView(this);
     }
 
     /**

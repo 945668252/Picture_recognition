@@ -2,8 +2,7 @@ package com.sendi.picture_recognition.base;
 
 import android.view.View;
 
-import com.sendi.picture_recognition.bean.ClassData;
-import com.sendi.picture_recognition.controller.LoadDataScrollController;
+import com.sendi.picture_recognition.utils.LoadDataScrollController;
 import com.sendi.picture_recognition.view.IView;
 
 import java.util.List;

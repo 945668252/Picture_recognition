@@ -1,7 +1,7 @@
 package com.sendi.picture_recognition.view.fragment.home.pk;
 
 import com.sendi.picture_recognition.base.BaseFragment;
-import com.sendi.picture_recognition.controller.LoadDataScrollController;
+import com.sendi.picture_recognition.utils.LoadDataScrollController;
 
 import java.util.List;
 

@@ -8,7 +8,6 @@ import android.widget.RadioGroup;
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.base.BaseActivity;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.activity.LoginActivity;
 import com.sendi.picture_recognition.presenter.act.SettingPresenter;
 
 /**

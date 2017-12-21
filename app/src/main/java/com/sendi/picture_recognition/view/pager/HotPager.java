@@ -15,7 +15,7 @@ import com.sendi.picture_recognition.base.BasePager;
 import com.sendi.picture_recognition.bean.ImgInfo;
 import com.sendi.picture_recognition.bean.SearchPicData;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.activity.MakeTagActivity;
+import com.sendi.picture_recognition.view.activity.MakeTagActivity;
 import com.sendi.picture_recognition.view.adapter.SearchPagerAdapter;
 import com.sendi.picture_recognition.presenter.search.SearchPresenter;
 import com.sendi.picture_recognition.utils.httputils.parseutils.SplitString;

@@ -10,9 +10,8 @@ import android.view.View;
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.ChallengeHistory;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.LoadDataScrollController;
-import com.sendi.picture_recognition.controller.activity.PKResultActivity;
-import com.sendi.picture_recognition.controller.adapter.pk_adapter.HistoryAdapter;
+import com.sendi.picture_recognition.view.activity.PkResultActivity;
+import com.sendi.picture_recognition.view.adapter.pk_adapter.HistoryAdapter;
 import com.sendi.picture_recognition.presenter.pk.PkPresenter;
 import com.sendi.picture_recognition.view.activity.SingleChallengeActivity;
 
@@ -72,7 +71,7 @@ public class HistoryFragment extends AbstractPkFragment<ChallengeHistory> {
                     intent.putExtra("type", 1);
                     startActivity(intent);
                 } else {
-                    Intent intent = new Intent(getActivity(), PKResultActivity.class);
+                    Intent intent = new Intent(getActivity(), PkResultActivity.class);
                     intent.putExtra("mId", historyList.get(position).id);
                     startActivity(intent);
                 }

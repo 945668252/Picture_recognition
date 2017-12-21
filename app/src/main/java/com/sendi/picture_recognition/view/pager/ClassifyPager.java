@@ -13,9 +13,9 @@ import com.sendi.picture_recognition.base.BaseActivity;
 import com.sendi.picture_recognition.base.BasePager;
 import com.sendi.picture_recognition.bean.ClassData;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.activity.PicClassDetailActivity;
-import com.sendi.picture_recognition.controller.adapter.ClassPagerAdapter;
+import com.sendi.picture_recognition.view.adapter.ClassPagerAdapter;
 import com.sendi.picture_recognition.presenter.search.SearchPresenter;
+import com.sendi.picture_recognition.view.activity.PicClassDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;

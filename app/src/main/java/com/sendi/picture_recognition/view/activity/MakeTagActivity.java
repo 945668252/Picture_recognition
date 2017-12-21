@@ -25,7 +25,7 @@ import com.iflytek.cloud.ui.RecognizerDialogListener;
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.ImgInfo;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.adapter.TagAdapter;
+import com.sendi.picture_recognition.view.adapter.TagAdapter;
 import com.sendi.picture_recognition.presenter.act.MakeTagPresenter;
 import com.sendi.picture_recognition.utils.httputils.displayutils.DisplayMetricsUtils;
 import com.sendi.picture_recognition.utils.httputils.parseutils.ParseVoiceDataUtils;
@@ -76,6 +76,7 @@ public class MakeTagActivity extends AbsMakeTagView {
 
     private void initData(){
         mPresenter=new MakeTagPresenter();
+        mPresenter.bindView(this);
         tagList = new ArrayList<>();
         selectedTagList = new ArrayList<>();
         sb=new StringBuffer();
@@ -234,5 +235,11 @@ public class MakeTagActivity extends AbsMakeTagView {
     public void backMain(View view) {
         dialog.dismiss();
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPresenter.detachView();
     }
 }

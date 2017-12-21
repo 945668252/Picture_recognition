@@ -1,10 +1,10 @@
 package com.sendi.picture_recognition.model.act;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.sendi.picture_recognition.bean.BaseEntity;
 import com.sendi.picture_recognition.bean.RecordData;
-import com.sendi.picture_recognition.controller.activity.RecordActivity;
 import com.sendi.picture_recognition.model.abstract_act.AbsRecordModel;
 import com.sendi.picture_recognition.service.RecordService;
 import com.sendi.picture_recognition.utils.httputils.parseutils.SplitString;
@@ -38,6 +38,9 @@ public class RecordModel extends AbsRecordModel {
                 .getRecordDataDao()
                 .queryBuilder()
                 .listLazy();
+        Log.i("TAG", "getCacheData: "+cacheRecordDataList);
+        if (cacheRecordDataList==null)
+            return recordList;
         for (com.sendi.userdb.RecordData record : cacheRecordDataList) {
             RecordData recordData = new RecordData();
             recordData.setStatus(record.getStatus());

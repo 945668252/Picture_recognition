@@ -13,12 +13,11 @@ import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.ChallengeData;
 import com.sendi.picture_recognition.bean.HomePicInfo;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.activity.ChallengeActivity;
-import com.sendi.picture_recognition.controller.adapter.ChallengePagerAdapter;
-import com.sendi.picture_recognition.controller.pager.challenge.MoreChallengePager;
+import com.sendi.picture_recognition.view.adapter.ChallengePagerAdapter;
 import com.sendi.picture_recognition.presenter.abstract_act.AbsChallengePresenter;
 import com.sendi.picture_recognition.presenter.act.ChallengePresenter;
 import com.sendi.picture_recognition.view.activity.abs.AbsChallengeView;
+import com.sendi.picture_recognition.view.pager.MoreChallengePager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,7 +26,6 @@ import java.util.List;
 
 public class MoreChallengeActivity extends AbsChallengeView<List<HomePicInfo>> implements MoreChallengePager.OnSaveItemClickListener {
 
-    private final String TAG = ChallengeActivity.class.getName();
     private ViewPager mViewPager;
     private ChallengePagerAdapter mAdapter;
     private Button mButton;
@@ -58,7 +56,6 @@ public class MoreChallengeActivity extends AbsChallengeView<List<HomePicInfo>> i
         pagerList = new ArrayList<>();
         picInfoList = new ArrayList<>();
         mId = getIntent().getStringExtra("mId");
-        Log.i(TAG, "initData: " + mId);
         //loadData
         mPresenter = new ChallengePresenter();
         mPresenter.bindView(this);

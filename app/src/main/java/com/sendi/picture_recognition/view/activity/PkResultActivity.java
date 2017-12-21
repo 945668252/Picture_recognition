@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,8 +13,7 @@ import com.bumptech.glide.Glide;
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.PKResultData;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.activity.PKResultActivity;
-import com.sendi.picture_recognition.controller.adapter.PKResultAdapter;
+import com.sendi.picture_recognition.view.adapter.PKResultAdapter;
 import com.sendi.picture_recognition.presenter.abstract_act.AbsPkResultPresenter;
 import com.sendi.picture_recognition.presenter.act.PkResultPresenter;
 import com.sendi.picture_recognition.view.activity.abs.AbsPkResultView;
@@ -61,7 +59,7 @@ public class PkResultActivity extends AbsPkResultView {
     private void initData() {
         mId = getIntent().getStringExtra("mId");
         mPresenter=new PkResultPresenter();
-
+        mPresenter.bindView(this);
         mPresenter.getPkResultData(mId, GlobalConfig.USERID);
     }
 
@@ -90,5 +88,11 @@ public class PkResultActivity extends AbsPkResultView {
     }
     public void back(View view){
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPresenter.detachView();
     }
 }

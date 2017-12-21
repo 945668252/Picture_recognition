@@ -13,7 +13,7 @@ import com.canyinghao.candialog.CanDialog;
 import com.canyinghao.candialog.CanDialogInterface;
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.UserChartInfo;
-import com.sendi.picture_recognition.controller.adapter.pk_adapter.ChartAdapter;
+import com.sendi.picture_recognition.view.adapter.pk_adapter.ChartAdapter;
 import com.sendi.picture_recognition.presenter.pk.PkPresenter;
 import com.sendi.picture_recognition.view.activity.SingleChallengeActivity;
 
@@ -25,7 +25,7 @@ import java.util.List;
  */
 
 public class ChartFragment extends AbstractPkFragment<UserChartInfo> {
-    private final String TAG = com.sendi.picture_recognition.controller.frame.pk.ChartFragment.class.getName();
+    private final String TAG = ChartFragment.class.getName();
 
     private RecyclerView mRecyclerView;
     private ChartAdapter mAdapter;

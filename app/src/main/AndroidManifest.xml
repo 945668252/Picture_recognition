@@ -34,6 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".view.activity.UpdateTagsActivity"/>
         <activity android:name=".view.activity.LoginActivity"/>
         <activity android:name=".view.activity.RegisterActivity"/>
         <activity android:name=".view.activity.MakeTagActivity"/>
@@ -47,20 +48,6 @@
         <activity android:name=".view.activity.UserInfoActivity"/>
         <activity android:name=".view.activity.AlertUserInfoActivity"/>
         <activity android:name=".view.activity.SettingActivity"/>
-
-        <activity android:name=".controller.activity.UserInfoActivity">
-        </activity>
-        <activity android:name=".controller.activity.AlertUserInfoActivity">
-        </activity>
-        <activity android:name=".controller.activity.UpdateTagsActivity">
-        </activity>
-        <activity android:name=".controller.activity.SettingActivity">
-        </activity>
-        <activity android:name=".controller.activity.TestActivity">
-        </activity>
-        <activity android:name=".controller.activity.ChallengeActivity">
-        </activity>
-        <activity android:name=".controller.activity.SingleChallengeActivity"/>
 
     </application>
 

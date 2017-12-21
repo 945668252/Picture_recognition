@@ -10,18 +10,16 @@ import android.widget.TextView;
 
 import com.canyinghao.candialog.CanDialog;
 import com.canyinghao.candialog.CanDialogInterface;
-import com.google.gson.Gson;
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.ChallengeData;
 import com.sendi.picture_recognition.bean.HomePicInfo;
 import com.sendi.picture_recognition.bean.SingleChallengeData;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.activity.ChallengeActivity;
-import com.sendi.picture_recognition.controller.adapter.ChallengePagerAdapter;
-import com.sendi.picture_recognition.controller.pager.challenge.MoreChallengePager;
+import com.sendi.picture_recognition.view.adapter.ChallengePagerAdapter;
 import com.sendi.picture_recognition.presenter.abstract_act.AbsChallengePresenter;
 import com.sendi.picture_recognition.presenter.act.ChallengePresenter;
 import com.sendi.picture_recognition.view.activity.abs.AbsChallengeView;
+import com.sendi.picture_recognition.view.pager.MoreChallengePager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,7 +32,7 @@ import java.util.List;
  */
 
 public class SingleChallengeActivity extends AbsChallengeView<SingleChallengeData> implements MoreChallengePager.OnSaveItemClickListener {
-    private final String TAG = ChallengeActivity.class.getName();
+    private final String TAG = this.getClass().getName();
     private ViewPager mViewPager;
     private ChallengePagerAdapter mAdapter;
     private Button mButton;

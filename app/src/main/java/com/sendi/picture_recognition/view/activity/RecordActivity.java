@@ -6,15 +6,13 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.RecordData;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.activity.UpdateTagsActivity;
-import com.sendi.picture_recognition.controller.adapter.RecordFragmentAdapter;
+import com.sendi.picture_recognition.view.adapter.RecordFragmentAdapter;
 import com.sendi.picture_recognition.presenter.act.RecordPresenter;
 import com.sendi.picture_recognition.view.activity.abs.AbsRecordView;
 import com.sendi.picture_recognition.widget.circlerefreshlayout.CircleRefreshLayout;
@@ -27,7 +25,7 @@ import java.util.List;
  */
 
 public class RecordActivity extends AbsRecordView {
-    private final static String TAG = com.sendi.picture_recognition.controller.activity.RecordActivity.class.getSimpleName();
+    private final static String TAG =RecordActivity.class.getSimpleName();
     private RecyclerView mRecyclerView;
     private CircleRefreshLayout mCircleRefreshLayout;
     private RecordFragmentAdapter mAdapter;
@@ -63,7 +61,6 @@ public class RecordActivity extends AbsRecordView {
             }
         });
         mRecyclerView.setAdapter(mAdapter);
-        mPresenter = new RecordPresenter();
         mCircleRefreshLayout.setOnRefreshListener(new CircleRefreshLayout.OnCircleRefreshListener() {
             @Override
             public void completeRefresh() {
@@ -77,6 +74,9 @@ public class RecordActivity extends AbsRecordView {
                 mPresenter.getRecordData(GlobalConfig.USERID);
             }
         });
+
+        mPresenter = new RecordPresenter();
+        mPresenter.bindView(this);
 
         mPresenter.getCacheData(this);
 
@@ -106,5 +106,11 @@ public class RecordActivity extends AbsRecordView {
 
     public void back(View view) {
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPresenter.detachView();
     }
 }

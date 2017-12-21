@@ -13,7 +13,7 @@ import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.bean.HomePicInfo;
 import com.sendi.picture_recognition.bean.ImgInfo;
 import com.sendi.picture_recognition.config.GlobalConfig;
-import com.sendi.picture_recognition.controller.activity.MakeTagActivity;
+import com.sendi.picture_recognition.view.activity.MakeTagActivity;
 import com.sendi.picture_recognition.view.adapter.HomeFragmentAdapter;
 import com.sendi.picture_recognition.presenter.home.HomePresenter;
 import com.sendi.picture_recognition.utils.httputils.parseutils.SplitString;

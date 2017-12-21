@@ -14,39 +14,39 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RetrofitFactory {
-    public static RetrofitFactory mRetrofitFactory;
-    private static  ApiServer mApiServer;
+//    public static RetrofitFactory mRetrofitFactory;
+//    private static  ApiServer mApiServer;
     private static Retrofit mRetrofit;
 
-    private RetrofitFactory(){
-        OkHttpClient mOkHttpClient=new OkHttpClient.Builder()
-                .connectTimeout(GlobalConfig.HTTP_TIME, TimeUnit.SECONDS)
-                .readTimeout(GlobalConfig.HTTP_TIME,TimeUnit.SECONDS)
-                .addInterceptor(InterceptorUtil.HeaderInterceptor())
-                .addInterceptor(InterceptorUtil.LogInterceptor())
-                .build();
-        Retrofit mRetrofit=new Retrofit.Builder()
-                .baseUrl(GlobalConfig.CONTENT_SERVER)
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .client(mOkHttpClient)
-                .build();
-        mApiServer=mRetrofit.create(ApiServer.class);
-    }
-
-    public static RetrofitFactory getInstance(){
-        if (mRetrofitFactory==null){
-            synchronized (RetrofitFactory.class){
-                if (mRetrofitFactory==null){
-                    mRetrofitFactory=new RetrofitFactory();
-                }
-            }
-        }
-        return mRetrofitFactory;
-    }
-    public ApiServer getAPI(){
-        return mApiServer;
-    }
+//    private RetrofitFactory(){
+//        OkHttpClient mOkHttpClient=new OkHttpClient.Builder()
+//                .connectTimeout(GlobalConfig.HTTP_TIME, TimeUnit.SECONDS)
+//                .readTimeout(GlobalConfig.HTTP_TIME,TimeUnit.SECONDS)
+//                .addInterceptor(InterceptorUtil.HeaderInterceptor())
+//                .addInterceptor(InterceptorUtil.LogInterceptor())
+//                .build();
+//        Retrofit mRetrofit=new Retrofit.Builder()
+//                .baseUrl(GlobalConfig.CONTENT_SERVER)
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+//                .client(mOkHttpClient)
+//                .build();
+//        mApiServer=mRetrofit.create(ApiServer.class);
+//    }
+//
+//    public static RetrofitFactory getInstance(){
+//        if (mRetrofitFactory==null){
+//            synchronized (RetrofitFactory.class){
+//                if (mRetrofitFactory==null){
+//                    mRetrofitFactory=new RetrofitFactory();
+//                }
+//            }
+//        }
+//        return mRetrofitFactory;
+//    }
+//    public ApiServer getAPI(){
+//        return mApiServer;
+//    }
 
     public static <T> T getService(Class<T> tClass){
         if(mRetrofit==null){
