@@ -3,6 +3,7 @@ package com.sendi.picture_recognition.service;
 import com.sendi.picture_recognition.bean.BaseEntity;
 import com.sendi.picture_recognition.bean.ChallengeHistory;
 import com.sendi.picture_recognition.bean.MorePKInfo;
+import com.sendi.picture_recognition.bean.PKResultData;
 import com.sendi.picture_recognition.bean.UserChartInfo;
 
 import java.util.List;
@@ -45,4 +46,12 @@ public interface PkService {
      */
     @GET("picture/creatmoreaction.action")
     Observable<BaseEntity<String>> getCreateResult(@Query("vid") String vId);
+
+    /**
+     * 获取双人pk结果
+     * @param pkId
+     * @return
+     */
+    @GET("volunteer/detail.action")
+    Observable<BaseEntity<PKResultData>>getPkResultData(@Query("pkId")String pkId, @Query("vid")String vId);
 }

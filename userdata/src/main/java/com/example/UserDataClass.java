@@ -5,6 +5,7 @@ import de.greenrobot.daogenerator.Entity;
 import de.greenrobot.daogenerator.Schema;
 
 public class UserDataClass {
+
     public static void main(String[] args){
         Schema schema=new Schema(1,"com.sendi.userdb");
 

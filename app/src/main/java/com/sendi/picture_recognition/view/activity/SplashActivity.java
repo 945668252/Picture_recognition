@@ -1,4 +1,4 @@
-package com.sendi.picture_recognition.controller.activity;
+package com.sendi.picture_recognition.view.activity;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,9 +11,9 @@ import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechUtility;
 import com.sendi.picture_recognition.R;
 import com.sendi.picture_recognition.config.GlobalConfig;
+import com.sendi.picture_recognition.controller.activity.*;
 import com.sendi.picture_recognition.utils.httputils.sputils.SPUtils;
 import com.sendi.picture_recognition.utils.httputils.sqliteutils.SqliteDBUtils;
-import com.sendi.picture_recognition.view.activity.MainActivity;
 import com.sendi.userdb.DaoMaster;
 import com.sendi.userdb.DaoSession;
 import com.sendi.userdb.User;
@@ -45,10 +45,9 @@ public class SplashActivity extends BaseActivity {
     private void toMainOrLogin() {
         List<User>list=mUserDao.queryBuilder().listLazy();
         if (list.size()!=0) {//直接跳转到主界面
-            Log.i(TAG, "toMainOrLogin: "+list);
             startActivity(new Intent(SplashActivity.this, MainActivity.class));
         }else {//跳转到登录界面
-            startActivity(new Intent(SplashActivity.this,LoginActivity.class));
+            startActivity(new Intent(SplashActivity.this, com.sendi.picture_recognition.controller.activity.LoginActivity.class));
         }
         finish();
     }

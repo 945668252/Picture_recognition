@@ -21,6 +21,7 @@ public class LoginActivity extends BaseActivity {
     private final String TAG = this.getClass().getName();
     private EditText et_user_name;
     private EditText et_user_psw;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

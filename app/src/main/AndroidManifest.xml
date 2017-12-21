@@ -27,46 +27,41 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".controller.activity.LoginActivity">
-        </activity>
-        <activity android:name=".controller.activity.RegisterActivity">
-        </activity>
-        <activity android:name=".controller.activity.MakeTagActivity">
-        </activity>
-        <activity android:name=".controller.activity.UserInfoActivity">
-        </activity>
-        <activity android:name=".view.activity.GradeActivity">
-        </activity>
-        <activity android:name=".controller.activity.AlertUserInfoActivity">
-        </activity>
-        <activity android:name=".controller.activity.UpdateTagsActivity">
-        </activity>
-        <activity android:name=".controller.activity.SplashActivity">
-
-        </activity>
-        <activity android:name=".controller.activity.SettingActivity">
-        </activity>
-        <activity android:name=".controller.activity.PicClassDetailActivity">
-        </activity>
-        <activity android:name=".controller.activity.TestActivity">
+        <activity android:name=".view.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.RecordActivity">
-        </activity>
-        <activity android:name=".controller.activity.ChallengeActivity">
-        </activity>
+        <activity android:name=".view.activity.LoginActivity"/>
+        <activity android:name=".view.activity.RegisterActivity"/>
+        <activity android:name=".view.activity.MakeTagActivity"/>
+        <activity android:name=".view.activity.PicClassDetailActivity"/>
+        <activity android:name=".view.activity.RecordActivity"/>
+        <activity android:name=".view.activity.GradeActivity"/>
         <activity android:name=".view.activity.IntegralShopActivity"/>
-        <activity android:name=".controller.activity.SingleChallengeActivity"/>
-        <activity android:name=".controller.activity.PKResultActivity"/>
+        <activity android:name=".view.activity.PkResultActivity"/>
         <activity android:name=".view.activity.MoreChallengeActivity"/>
         <activity android:name=".view.activity.SingleChallengeActivity"/>
         <activity android:name=".view.activity.UserInfoActivity"/>
         <activity android:name=".view.activity.AlertUserInfoActivity"/>
         <activity android:name=".view.activity.SettingActivity"/>
+
+        <activity android:name=".controller.activity.UserInfoActivity">
+        </activity>
+        <activity android:name=".controller.activity.AlertUserInfoActivity">
+        </activity>
+        <activity android:name=".controller.activity.UpdateTagsActivity">
+        </activity>
+        <activity android:name=".controller.activity.SettingActivity">
+        </activity>
+        <activity android:name=".controller.activity.TestActivity">
+        </activity>
+        <activity android:name=".controller.activity.ChallengeActivity">
+        </activity>
+        <activity android:name=".controller.activity.SingleChallengeActivity"/>
+
     </application>
 
 </manifest>

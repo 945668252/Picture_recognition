@@ -12,7 +12,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.sendi.picture_recognition.controller.activity.SplashActivity">
+    tools:context="com.sendi.picture_recognition.view.activity.SplashActivity">
 <ImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
