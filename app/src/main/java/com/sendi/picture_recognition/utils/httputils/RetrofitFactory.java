@@ -18,6 +18,7 @@ public class RetrofitFactory {
 //    private static  ApiServer mApiServer;
     private static Retrofit mRetrofit;
 
+    private RetrofitFactory(){}
 //    private RetrofitFactory(){
 //        OkHttpClient mOkHttpClient=new OkHttpClient.Builder()
 //                .connectTimeout(GlobalConfig.HTTP_TIME, TimeUnit.SECONDS)
