@@ -24,7 +24,8 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
 /**
- * Created by Administrator on 2017/12/20.
+ * 重构
+ * 注册
  */
 
 public class RegisterActivity extends AbsRegisterView {

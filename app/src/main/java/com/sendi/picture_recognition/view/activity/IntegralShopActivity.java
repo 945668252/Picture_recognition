@@ -30,6 +30,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/12/20.
+ * 重构
+ * 积分商城
  */
 
 public class IntegralShopActivity extends IntegralShopView implements ComonPopupWindow.ViewInterface {

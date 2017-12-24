@@ -24,6 +24,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * 多人挑战
+ */
 public class MoreChallengeActivity extends AbsChallengeView<List<HomePicInfo>> implements MoreChallengePager.OnSaveItemClickListener {
 
     private ViewPager mViewPager;

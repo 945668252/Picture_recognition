@@ -11,7 +11,7 @@ import com.sendi.picture_recognition.config.GlobalConfig;
 import com.sendi.picture_recognition.presenter.act.SettingPresenter;
 
 /**
- * Created by Administrator on 2017/12/8.
+ * 设置
  */
 
 public class SettingActivity extends BaseActivity {

@@ -37,6 +37,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/12/5.
+ * 重构
+ * 主活动
  */
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -100,7 +102,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     private void initData() {
         userDao = SqliteDBUtils
-                .getInstance(this)
+                .getInstance(getApplication())
                 .getUserDao();
         GlobalConfig.USERID = userDao
                 .queryBuilder()

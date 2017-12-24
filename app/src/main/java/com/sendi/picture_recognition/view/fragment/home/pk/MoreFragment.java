@@ -23,6 +23,7 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/12/6.
+ * 多人挑战列表
  */
 
 public class MoreFragment extends AbstractPkFragment<MorePKInfo> implements View.OnClickListener{

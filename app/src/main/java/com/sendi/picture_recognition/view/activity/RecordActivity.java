@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/12/20.
+ * 个人记录
  */
 
 public class RecordActivity extends AbsRecordView {
@@ -78,7 +78,7 @@ public class RecordActivity extends AbsRecordView {
         mPresenter = new RecordPresenter();
         mPresenter.bindView(this);
 
-        mPresenter.getCacheData(this);
+        mPresenter.getCacheData(getApplicationContext());
 
         mPresenter.getRecordData(GlobalConfig.USERID);
     }
@@ -90,7 +90,7 @@ public class RecordActivity extends AbsRecordView {
         mAdapter.notifyDataSetChanged();
 
         //缓存
-        mPresenter.cacheData(mRecordLists, this);
+        mPresenter.cacheData(mRecordLists, getApplicationContext());
     }
 
     @Override

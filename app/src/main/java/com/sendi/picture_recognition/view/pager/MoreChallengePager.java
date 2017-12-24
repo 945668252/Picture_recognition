@@ -20,6 +20,7 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/6/23.
+ * 挑战界面的每一页界面
  */
 
 public class MoreChallengePager  {

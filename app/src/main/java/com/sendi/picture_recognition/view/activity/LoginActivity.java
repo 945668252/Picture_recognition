@@ -13,7 +13,7 @@ import com.sendi.picture_recognition.bean.User;
 import com.sendi.picture_recognition.presenter.act.LoginPresenter;
 
 /**
- * Created by Administrator on 2017/12/20.
+ * 登录
  */
 
 public class LoginActivity extends BaseActivity {

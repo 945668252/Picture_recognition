@@ -25,7 +25,7 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
 /**
- * Created by Administrator on 2017/12/8.
+ * 修改用户信息
  */
 
 public class AlertUserInfoActivity extends AbsUserInfoView implements View.OnClickListener {
@@ -82,7 +82,7 @@ public class AlertUserInfoActivity extends AbsUserInfoView implements View.OnCli
     private void initData() {
         mPresenter = new AlertUserInfoPresenter();
         mPresenter.bindView(this);
-        mPresenter.initUser(this);
+        mPresenter.initUser(getApplicationContext());
     }
 
     @Override

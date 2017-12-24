@@ -20,7 +20,7 @@ import com.sendi.picture_recognition.view.activity.abs.AbsPkResultView;
 import com.sendi.picture_recognition.widget.CircleImageView;
 
 /**
- * Created by Administrator on 2017/12/21.
+ * PK结果
  */
 
 public class PkResultActivity extends AbsPkResultView {

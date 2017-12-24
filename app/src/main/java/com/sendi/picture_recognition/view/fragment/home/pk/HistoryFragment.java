@@ -20,6 +20,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/12/6.
+ * 重构
+ * 挑战历史
  */
 
 public class HistoryFragment extends AbstractPkFragment<ChallengeHistory> {

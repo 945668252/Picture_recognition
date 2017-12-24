@@ -18,7 +18,8 @@ public class SqliteDBUtils {
     public static DaoSession daoSession;
 
     private SqliteDBUtils(Context context) {
-        SQLiteDatabase db = new DaoMaster.DevOpenHelper(context, "person.db", null).getWritableDatabase();
+        SQLiteDatabase db = new DaoMaster.DevOpenHelper(context, "person.db", null)
+                .getWritableDatabase();
         DaoMaster daoMaster = new DaoMaster(db);
         daoSession=daoMaster.newSession();
     }

@@ -31,6 +31,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/12/21.
+ * 重构
+ * 更新标注记录
  */
 
 public class UpdateTagsActivity extends AbsUpdateTagsView implements ComonPopupWindow.ViewInterface {

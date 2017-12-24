@@ -22,6 +22,8 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2017/12/6.
+ * 重构
+ * 排行榜
  */
 
 public class ChartFragment extends AbstractPkFragment<UserChartInfo> {

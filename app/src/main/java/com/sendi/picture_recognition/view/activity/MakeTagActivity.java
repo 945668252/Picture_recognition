@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/12/20.
+ * 打标签
  */
 
 public class MakeTagActivity extends AbsMakeTagView {

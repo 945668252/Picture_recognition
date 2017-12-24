@@ -21,6 +21,9 @@ import com.sendi.userdb.UserDao;
 
 import java.util.List;
 
+/**
+ * 欢迎页面
+ */
 public class SplashActivity extends BaseActivity {
     private final String TAG=this.getClass().getName();
     private SQLiteDatabase db;

@@ -13,6 +13,8 @@ import com.sendi.picture_recognition.widget.ProgressCircle;
 
 /**
  * Created by Administrator on 2017/12/8.
+ * 重构
+ * 个人积分
  */
 
 public class GradeActivity extends BaseActivity {

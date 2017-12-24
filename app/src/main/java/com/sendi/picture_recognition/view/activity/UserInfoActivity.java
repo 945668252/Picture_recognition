@@ -31,6 +31,9 @@ import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
+/**
+ * 用户信息界面
+ */
 public class UserInfoActivity extends AbsUserInfoView {
     private final static String TAG = "SENDI";
     private ListView mListView;
